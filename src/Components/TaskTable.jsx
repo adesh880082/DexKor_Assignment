@@ -143,7 +143,7 @@ const TaskTable = ({ TableData }) => {
                   <FaExpandAlt />
                 </span>
                 <span
-                  className="logo_right_modal"
+                  className="logo_right_modal_2"
                   onClick={() => setModalRow(null)}
                 >
                   <RxCross2 />
