@@ -35,7 +35,7 @@ To run this project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/repo-name.git
+git clone https://github.com/adesh880082/DexKor_Assignment.git
 
 # Navigate to project folder
 cd repo-name
