@@ -1,0 +1,167 @@
+.layout {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 35px); /* below navbar */
+}
+
+/* Sidebar */
+.sidebar {
+  background: white;
+  color: rgb(72, 72, 72);
+  transition: flex-basis 0.5s ease-in;
+  font-weight: bold;
+  /* overflow: hidden; */
+}
+
+.sidebar.expanded {
+  flex-basis: 15.3%;
+}
+
+.sidebar.collapsed {
+  flex-basis: 0;
+}
+
+/* Sidebar list */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
+}
+
+.sidebar ul li span {
+  font-size: 1.2rem;
+}
+
+.sidebar ul li:hover{
+    background: #374151;
+    color: white;
+}
+.sidebar ul li.active {
+  background: #1e4d92;
+  color: white;
+}
+
+/* Content area */
+.content {
+  transition: width 0.3s ease;
+  padding-left: 10px;
+  background: #f9f9f9;
+}
+
+.content.with-sidebar {
+  width: 84.5%;
+}
+
+.content.full {
+  width: 100%;
+}
+
+
+.mainDiv{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.logoContainer{
+    margin: 0px;
+    padding: 3px;
+    background-color: white;
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    height: 25px;
+    width: 130px;
+}
+
+.menuLogo{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.searchBoxContainer{
+    margin-left: 3px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 2px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-items: start;
+    padding-bottom: 5px;
+    width: 85%;
+}
+
+.acCont{
+    width: 20%;
+    padding-left: 5px;
+}
+
+.contSearch{
+    margin: 0px;
+    padding: 0px;
+    width: 30%;
+}
+
+.search{
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.spn{
+    color: rgba(133, 133, 133, 1);
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.inp{
+    border: none;
+    outline: none;
+    height: 100%;
+    background-color: rgb(245, 245, 245);
+    width: 90%;
+}
+
+.sec_3{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-right: 20px;
+}
+
+.separation{
+    border-left: 2px solid rgba(133, 133, 133, 1);
+    height: 17px;
+}
+.commonColor{
+    color: #858585;
+    cursor: pointer;
+}
+.acName{
+    background-color: rgb(19, 116, 252);
+    color: white;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

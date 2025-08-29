@@ -1,0 +1,386 @@
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: 0.8rem;
+}
+
+/* Let table behave well with sticky */
+.task-table {
+  border-collapse: collapse; /* change from separate */
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+/* Sticky Header */
+.task-table thead th {
+  position: sticky;
+  top: 0;
+  background: #87cefa; /* header color */
+  z-index: 10; /* make sure it's above td */
+  padding: 12px;
+  font-weight: 600;
+  color: #000;
+  border-bottom: 2px solid #b0e0ff;
+  font-size: 1rem;
+}
+
+/* Cells */
+.task-table th,
+.task-table td {
+  padding: 12px;
+  border: none;
+}
+
+/* Rows */
+.table-row {
+  cursor: pointer;
+  background: #f0f8ff; /* default light row background */
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* subtle shadow */
+  transition: background 0.2s;
+}
+
+.table-row:hover {
+  background: #b0e0ff; /* hover effect */
+}
+
+/* Priority Badges */
+.priority-badge {
+  padding: 4px 10px;
+  border-radius: 15px;
+  color: white;
+  font-weight: 500;
+}
+
+.priority-badge.low {
+  background: green;
+}
+
+.priority-badge.medium {
+  background: orange;
+}
+
+.priority-badge.high {
+  background: red;
+}
+
+.priority-badge.critical {
+  background: grey;
+}
+
+/* Status Badges */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.status-badge.pending {
+  background: #f4e1c1;
+  color: brown;
+}
+
+.status-badge.completed {
+  background: #d4edda;
+  color: green;
+}
+
+.status-badge.cancelled {
+  background: #f8d7da;
+  color: red;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  border-radius: 20px;
+  right: 25px;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 12;
+  width: 450px;
+  height: 600px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.modal {
+  background: white;
+  border-radius: 20px;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.modalHeader{
+    height: 50px;
+    background-color: #1e4d92;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.nmLog_modal{
+    background-color: white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    font-size: 1.2rem;
+    align-content: center;
+    text-align: center;
+    font-weight: 600;
+}
+
+.nm_modal{
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.logoContainerRightModal{
+    display: flex;
+    gap: 5px;
+}
+
+.logo_right_modal{
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #426ba7;
+    padding: 5px 6px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_right_modal:hover{
+    background-color: #1e4d92;
+}
+
+.container_inside_Modal{
+    padding-top: 0.9rem;
+    padding-left: 1rem;
+}
+
+.introCont_modal{
+    font-size: 0.9rem;
+    color: rgb(141, 138, 138);
+}
+
+.span_modal{
+    color: black;
+    font-weight: 600;
+    margin-left: 0.8rem;
+}
+
+.introCont_modal_2{
+    font-size: 0.9rem;
+    color: rgb(141, 138, 138);
+    margin-top: 1rem;
+}
+
+.status_modal{
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.status_modal.pending {
+  background: #f4e1c1;
+  color: brown;
+}
+
+.status_modal.completed {
+  background: #d4edda;
+  color: green;
+}
+
+.status_modal.cancelled {
+  background: #f8d7da;
+  color: red;
+}
+
+
+.priority_modal {
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.priority_modal.low {
+  color: green;
+  background: #d4edda;
+}
+
+.priority_modal.medium {
+  color: orange;
+  background: rgb(255, 233, 192);
+}
+
+.priority_modal.high {
+  color: red;
+  background: #f8d7da;
+}
+
+.priority_modal.critical {
+  color: grey;
+  background: rgb(237, 237, 237);
+}
+
+.insideSpan{
+    color: white;
+    background-color: blue;
+    font-size: 0.7rem;
+    padding: 5px 9px;
+    border-radius: 50%;
+    font-weight: 600;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+
+.outsideSpan{
+    padding: 8px 10px;
+    margin-left: 1rem;
+    background-color: white;
+    border: 0.5px solid rgb(162, 162, 162);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.modalMenuSection{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    border-bottom: 1px solid rgb(162, 162, 162);
+    border-top: 1px solid rgb(162, 162, 162);
+    padding: 0px 1rem;
+}
+
+.menuModalDiv{
+    padding: 10px 4px;
+    cursor: pointer;
+}
+
+.active_Menu{
+    border-bottom: 2px solid black;
+    font-weight: 600;
+}
+
+.Content_of_Modal{
+    margin-top: 1rem;
+    /* padding-left: 1rem; */
+    font-size: 1.2rem;
+}
+
+.TickerSection{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 1rem;
+}
+.btn_ticket{
+    padding: 5px 8px;
+    border: 1px solid rgb(162, 162, 162);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background-color: white;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.btn_ticket:hover{
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.ticket_list_cont{
+    background-color: rgb(227, 227, 227);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ticket_list{
+    height: 120px;
+    width: 90%;
+    background-color: white;
+    margin: 10px 0px;
+    border-radius: 20px;
+}
+
+.status_modal_Ticket{
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-left: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.status_modal_Ticket.pending {
+  background: #f4e1c1;
+  color: brown;
+}
+
+.status_modal_Ticket.completed {
+  background: #d4edda;
+  color: green;
+}
+
+.status_modal_Ticket.cancelled {
+  background: #f8d7da;
+  color: red;
+}
+
+.Notes_Container{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textarea_Div{
+    height: 120px;
+    width: 400px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    padding: 10px 0px 0px 5px;
+}
+textarea{
+    height: 95%;
+    width: 97%;
+    outline: none;
+    border: none;
+    resize: none;
+}
+.editingOption{
+    height: 40px;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 0;
+    padding: 0;
+    padding: 0px 0px 0px 25px;
+    background-color: rgb(228, 228, 228);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.afterEditing{
+    /* margin-top: 1rem; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}

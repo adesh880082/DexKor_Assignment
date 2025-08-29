@@ -1,0 +1,60 @@
+.card {
+  margin-top: 1rem;
+  width: 260px;
+  height: 100px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.7rem;
+  height: 45px;
+}
+
+.card-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.card-heading {
+  font-weight: 600;
+  color: #444;
+}
+
+.card-count {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+}
+
+.card-count p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.card_spn{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1rem;
+}
