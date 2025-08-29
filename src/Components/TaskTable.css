@@ -156,6 +156,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .logo_right_modal_2{
@@ -168,6 +169,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .logo_right_modal:hover{
