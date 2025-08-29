@@ -38,7 +38,7 @@ To run this project locally:
 git clone https://github.com/adesh880082/DexKor_Assignment.git
 
 # Navigate to project folder
-cd repo-name
+cd dexkor
 
 # Install dependencies
 npm install
